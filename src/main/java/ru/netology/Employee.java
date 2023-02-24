@@ -19,6 +19,20 @@ public class Employee {
 		this.age = age;
 	}
 
+	public void setField(String nodeName, String textContent) {
+		if (nodeName.equals("id")) {
+			this.id = Long.parseLong(textContent, 10);
+		} else if (nodeName.equals("firstName")) {
+			this.firstName = textContent;
+		} else if (nodeName.equals("lastName")) {
+			this.lastName = textContent;
+		} else if (nodeName.equals("country")) {
+			this.country = textContent;
+		} else if (nodeName.equals("age")) {
+			this.age = Integer.parseInt(textContent, 10);
+		}
+	}
+
 	@Override
 	public String toString() {
 		return "Employee{" +
